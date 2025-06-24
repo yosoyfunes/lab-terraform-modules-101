@@ -1,0 +1,34 @@
+# Configuración del proyecto
+project_name = "mi-proyecto-lab"
+region       = "us-east-1"
+
+# Tags comunes
+common_tags = {
+  Environment = "development"
+  Project     = "terraform-modules-lab"
+  Owner       = "tu-nombre"
+  ManagedBy   = "terraform"
+}
+
+# Configuración de red
+vpc_cidr    = "10.0.0.0/16"
+subnet_cidr = "10.0.1.0/24"
+
+# Configuración de seguridad
+enable_ssh_access   = true
+enable_http_access  = true
+enable_https_access = false
+
+# Restringir SSH solo a tu IP (recomendado para producción)
+# ssh_cidr_blocks = ["TU.IP.PUBLICA.AQUI/32"]
+
+# Configuración de EC2
+instance_type        = "t2.micro"
+install_apache       = true
+encrypt_ebs_volumes  = true
+
+# Key pair para SSH (opcional - crear primero en AWS Console)
+# key_name = "mi-key-pair"
+
+# AMI específica (opcional - deja vacío para usar la más reciente)
+# ami_id = "ami-0abcdef1234567890"
